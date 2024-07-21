@@ -9,7 +9,7 @@ automated with the corresponding github repository
  . github admin grants access to the private repo
  . code checkout to the github repo
    for the purpose of this project
- . use iac tool (terraform) to create the servers to be used for our CI,such as
+ . use iac tool (terraform) to create the Virtual machines(AWS EC2 instances in ubuntu) to be used for our CI,such as
  jenkins-master: A continuos integration tool,,it serves as an orchestrator for other servers and tools.
  Sonarqube: A scanning tool
  Nexus: A record taking tool
@@ -28,10 +28,36 @@ automated with the corresponding github repository
  
 for the purpose of our project,we will use ansible playbook;
 to install jenkins in the jenkins server,nexus and sonarqube.
-to start,write the playbooks for each of the host machines(servers)
+to start,write the playbooks for each of the EC2 host machines(servers)
 below are the playbooks for each of the servers.
 an inventory file which holds the info about the hosts machine to be configured by ansible is also created,
 
+note the format: code,commands,little progress and result.
+
+
+using ansible
+to install ansible in the ansible controlnode
+
+The official projects personal package archive 
+```
+$ sudo apt-add-repository ppa:ansible/ansible
+```
+To update the system's package index
+```
+$ sudo apt update
+```
+install ansible software
+```
+$ sudo apt install ansible
+```
+
+NEXT,
+set up the inventory file
+The inventory file contains information about the hosts (the Vms) we intend to manage with ansible.
+the default ansible inventory path is /etc/ansible/hosts,hence,inventories are stored in it.
+```
+sudo nano /etc/ansible/hosts
+```
 
 
 
