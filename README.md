@@ -36,20 +36,29 @@ note the format: code,commands,little progress and result.
 
 
 using ansible
-to install ansible in the ansible controlnode
+to install ansible in the ansible controlnode using ubuntu
 
+Install the software-properties-common
+```
+$ sudo apt-get install software-properties-common
+```
 The official projects personal package archive 
 ```
 $ sudo apt-add-repository ppa:ansible/ansible
 ```
 To update the system's package index
 ```
-$ sudo apt update
+$ sudo apt-get update
 ```
 install ansible software
 ```
-$ sudo apt install ansible
+$ sudo apt-get install ansible
 ```
+to verify installation and the version
+```
+$ ansible --version
+```
+
 
 NEXT,
 set up the inventory file
