@@ -27,6 +27,20 @@ automated with the corresponding github repository
  this.
  
 for the purpose of our project,we will use ansible playbook;
+- for the CI-processes and steps as explained by aditya
+In this section,we will explain the continuous integration processes(CI)
+Table of content
+1. Create four AWS EC2 instances with terraform.
+2. Configure the instances with the appropriate servers with the aid ansible playbooks.
+ i. VM 1 for Jenkins_master
+ ii. VM 2 for Sonarqube 
+ iii. VM 3 for Nexus
+ iv.  VM 4 for Jenkins-slave
+3. Sign into each server via web browser.
+4. Go to jenkins,install the needed plugins and configure them.
+
+
+
 to install jenkins in the jenkins server,nexus and sonarqube.
 to start,write the playbooks for each of the EC2 host machines(servers)
 below are the playbooks for each of the servers.
