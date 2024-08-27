@@ -37,10 +37,10 @@ pipeline {
 
         stage('Build and Tag Docker Images') {
             steps {
-                sh 'docker build -t my-backend-image:0.0.1 ./backend'
-                sh 'docker tag my-backend-image:0.0.1 992382838241.dkr.ecr.us-east-1.amazonaws.com/backend:0.0.1'
-                sh 'docker build -t my-frontend-image:0.0.1 ./frontend'
-                sh 'docker tag my-frontend-image:0.0.1 992382838241.dkr.ecr.us-east-1.amazonaws.com/frontend:0.0.1'
+                sh 'docker build -t backend:0.0.1 ./backend'
+                sh 'docker tag backend:0.0.1 992382838241.dkr.ecr.us-east-1.amazonaws.com/backend'
+                sh 'docker build -t frontend:0.0.1 ./frontend'
+                sh 'docker tag frontend:0.0.1 992382838241.dkr.ecr.us-east-1.amazonaws.com/frontend'
             }
         }
 
