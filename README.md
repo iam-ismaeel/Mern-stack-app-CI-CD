@@ -83,7 +83,7 @@ sudo nano /etc/ansible/hosts
 ```
 
 NEXT,
-create SSH passwordless connection between the ansible control server and the target host.hsbsjkc
+create a SSH passwordless connection between the ansible control server and the target host.
 
 
 
