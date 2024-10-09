@@ -14,8 +14,9 @@ app.use('/hello',WorkoutsRoutes)
 
 mongoose.connect(process.env.MONGO_CONN_STR)
 .then(() => {
-    app.listen(process.env.PORT,() => {
-        console.log('Connected and Listening to requests made on',process.env.PORT)
+    const port = process.ENV.PORT  || 4000
+    app.listen(port,() => {
+        console.log(`Connected and Listening to requests made on ${port}....`)
        })
 })
 .catch((error) => {
